@@ -1,4 +1,20 @@
 <html>
-	<h1>Hi there!</h1>
-	<h3>It works!</h3>
+	<head>
+		<title>Blog sample</title>
+	</head>
+	<body>
+
+		<h1>Blos Sample with Django!</h1>
+		<h3>It works!</h3>
+	
+		<hr>
+		<p>Posts...</p>
+		{% for post in posts %}
+			<p><small>published: {{ post.published_date }}</small></p>
+			<h1><a href="">{{ post.title}}</a></h1>
+			<p>{{ post.text|linebreaks }}</p>
+
+		{% endfor %}
+
+	</body>
 </html>
